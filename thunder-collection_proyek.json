@@ -1,0 +1,62 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "proyek",
+    "collectionId": "66758822-a943-41f0-a33e-7e92a815449b",
+    "dateExported": "2024-07-07T02:52:27.334Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "df157d8a-122e-49ba-a980-bbcfd94f5026",
+            "colId": "66758822-a943-41f0-a33e-7e92a815449b",
+            "containerId": "",
+            "name": "booking",
+            "url": "http://localhost:8080/bookings",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-07-06T07:37:09.419Z",
+            "modified": "2024-07-06T08:41:49.861Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"customer_id\": \"550e8400-e29b-41d4-a716-446655440000\",\n    \"employee_id\": \"550e8400-e29b-41d4-a716-446655440001\",\n    \"lapangan_id\": \"550e8400-e29b-41d4-a716-446655440002\",\n    \"booking_date\": \"2024-07-07\",\n    \"jam\": \"14:00\",\n    \"total_pembayaran\": 100000,\n    \"pembayaran_sebagian\": 50000,\n    \"status_pembayaran\": \"partially_paid\"\n}\n",
+                "form": []
+            }
+        },
+        {
+            "_id": "41b6b38e-7878-4da4-8307-cf69a603506e",
+            "colId": "66758822-a943-41f0-a33e-7e92a815449b",
+            "containerId": "",
+            "name": "midtrans",
+            "url": "http://localhost:8080/api/v1/midtrans/create",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-07-06T08:42:06.229Z",
+            "modified": "2024-07-06T13:30:01.248Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"user_id\":1,\n  \"amount\":28000,\n  \"item_id\":\"teletubbies-3\",\n  \"item_name\": \"antena teletubbies\"\n  \n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "d14aa858-2368-4e93-9fcc-6442e85ca929",
+            "colId": "66758822-a943-41f0-a33e-7e92a815449b",
+            "containerId": "",
+            "name": "midtrans callback",
+            "url": "http://localhost:8080/api/v1/midtrans/webhook",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-07-06T09:51:38.717Z",
+            "modified": "2024-07-06T13:43:56.934Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n  \"transaction_status\": \"settlement\",\r\n  \"fraud_status\": \"accept\",\r\n  \"order_id\": \"MID-User-1-Item-123\",\r\n  \"payment_type\": \"gopay\",\r\n  \"transaction_time\": \"2023-07-06 10:00:00\",\r\n  \"transaction_id\": \"abcdef123456\",\r\n  \"status_code\": \"200\",\r\n  \"gross_amount\": \"100000.00\",\r\n  \"currency\": \"IDR\"\r\n}\r\n",
+                "form": []
+            }
+        }
+    ],
+    "ref": "E6_Ry7quPk5MOMxd9MHZupfh-cfpvH8GxIUI8FWMk5-FHEbOLu6bVfurx_c8PujYkQtUlgU42TuUxNU6AemEgw"
+}
